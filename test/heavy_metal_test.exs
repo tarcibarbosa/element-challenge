@@ -35,10 +35,10 @@ defmodule HeavyMetalTest do
   end
 
   test "calling heavy metal function with empty list and getting error" do
-    assert HeavyMetal.heavy_metal([])== :error 
+    assert HeavyMetal.heavy_metal([]) == :error
   end
 
   test "calling the function heavy metal with an object out the pattern and getting error" do
-    assert HeavyMetal.heavy_metal([%{id: 1, name: "nitrogen"}]) == :error 
+    assert HeavyMetal.heavy_metal([%{id: 1, name: "nitrogen"}]) == :error
   end
 end

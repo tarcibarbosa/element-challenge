@@ -5,7 +5,23 @@ defmodule ObjectValidation do
   """
 
   @doc """
-
+  validate object received
+  
+  ## Examples
+      iex> elements = [
+      iex>  %{
+      iex>      number: 77 ,
+      iex>      name: "Iridium", 
+      iex>      weight: 192
+      iex>    }, 
+      iex>    %{
+      iex>      name: "Hydrogen",
+      iex>      number: 1,
+      iex>      weight: 1
+      iex>  }] 
+      iex> ObjectValidation.has_keys?(elements)
+      iex> true
+      iex> false
   """
   def has_keys?(elements) when is_list(elements) do
     Enum.all?(elements, fn element -> has_key?(element) end)

@@ -26,10 +26,10 @@ defmodule ObjectValidationTest do
   ]
 
   test "successfuly validete list os elements" do
-  	assert ObjectValidation.has_keys?(@default_list_elements) == true
+    assert ObjectValidation.has_keys?(@default_list_elements) == true
   end
 
-  test "calling the function heavy metal with an object out the pattern and getting error" do
-    assert ObjectValidation.has_keys?([%{id: 1, name: "nitrogen"}]) == false 
+  test "calling the function with an object out the pattern and getting false result" do
+    assert ObjectValidation.has_keys?([%{id: 1, name: "nitrogen"}]) == false
   end
 end
